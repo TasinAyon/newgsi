@@ -7,7 +7,7 @@ on:
        - master
     
 env:
-  ROM_URL: https://mor1.androidfilehost.com/dl/_eC_jHk3r21VuSzCjou11A/1615294989/2188818919693749520/test.zip
+  ROM_URL: https://mva1.androidfilehost.com/dl/87oL7MEhk6Yr6S5C5Tor0Q/1615304968/2188818919693749558/super.zip
   ROM_NAME: Pixel
   ZIP_NAME: avd11emu
   TZ: Asia/Kolkata
