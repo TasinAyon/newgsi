@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://mva1.androidfilehost.com/dl/87oL7MEhk6Yr6S5C5Tor0Q/1615304968/2188818919693749558/super.zip
+  ROM_URL: https://mor1.androidfilehost.com/dl/sV7Um_cWIEgqkG1aidYqNA/1615350331/2188818919693749861/superS.zip
   ROM_NAME: Pixel
-  ZIP_NAME: avd11emu
+  ZIP_NAME: avdSemu
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
