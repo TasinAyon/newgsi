@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-rq2a.210305.006-factory-8c28fafa.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rq2a.210305.006-factory-76e89004.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel5
+  ZIP_NAME: pixel4a
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
