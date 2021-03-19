@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spp2.210219.008-factory-5a3571b6.zip
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/blueline-spp2.210219.008-factory-ed487533.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel5
+  ZIP_NAME: pixel3
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
