@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/blueline-spp2.210219.008-factory-ed487533.zip
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/bramble-spp2.210219.008-factory-d69c42ae.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel3
+  ZIP_NAME: pixel4a5g
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
