@@ -53,7 +53,7 @@ jobs:
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl --upload-file ./pixel3-GSI-Ab.7z https://transfer.sh/ 
+              curl --upload-file pixel3-GSI-Ab.7z https://transfer.sh/ 
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
