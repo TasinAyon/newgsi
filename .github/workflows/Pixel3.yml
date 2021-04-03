@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/bramble-spp2.210219.008.a1-factory-8c6dc612.zip
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/walleye-rpb1.200504.020-factory-9d894ef1.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel4a5g
+  ZIP_NAME: pixel2
   TZ: Asia/Kolkata
 jobs:
   build:
