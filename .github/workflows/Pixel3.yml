@@ -11,6 +11,7 @@ env:
   ROM_NAME: Pixel
   ZIP_NAME: pixel4
   TZ: Asia/Kolkata
+  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,23 +38,21 @@ jobs:
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
        
        - name: Setting up ErfanGSI requirements
-         continue-on-error: true
          run: |
               sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         continue-on-error: true
          run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
        
        - name: Zip AB and upload 
-         continue-on-error: true
          run: |
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl --upload-file ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z https://transfer.sh/
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer $MIR ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z    
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
