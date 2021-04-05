@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/walleye-rpb1.200504.020-factory-9d894ef1.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-rq2a.210305.007-factory-f539a94a.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel2
+  ZIP_NAME: pixel5
   TZ: Asia/Kolkata
 jobs:
   build:
