@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://bigota.d.miui.com/21.3.30/miui_GINKGO_21.3.30_b184351c6c_11.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: RedmiNote8
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spp2.210219.018-factory-ad880791.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel5
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
