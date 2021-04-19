@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://4pda.ru/pages/go/?u=http%3A%2F%2Fdl-res.flymeos.com%2FFirmware%2FFlyme%2Fnote8%2F7.1.6.1%2Fintl%2F20190611105505%2Fc563afb1%2Fupdate.zip&e=87194829
-  ROM_NAME: Flyme
-  ZIP_NAME: MeizuNote8
+  ROM_URL: https://dl.google.com/dl/android/aosp/sargo-rq2a.210405.005-factory-5c82997c.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel3a
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
