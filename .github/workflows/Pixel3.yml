@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/blueline-spp3.210325.010-factory-0323499a.zip
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/walleye-rpb1.200504.020-factory-9d894ef1.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel3
+  ZIP_NAME: pixel2
   TZ: Asia/Kolkata
 jobs:
   build:
