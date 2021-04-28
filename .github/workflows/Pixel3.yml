@@ -9,7 +9,7 @@ on:
 env:
   ROM_URL: https://lavender.automation9914.workers.dev/NordOxygen_14.O.13_OTA_013_all_2102040620_399989fdfddb4dd3.zip
   ROM_NAME: OxygenOS
-  ZIP_NAME: OnePlusNord
+  ZIP_NAME: OnePlusNord2
   TZ: Asia/Kolkata
 jobs:
   build:
