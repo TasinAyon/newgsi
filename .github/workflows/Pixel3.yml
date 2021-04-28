@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/walleye-rpb1.200504.020-factory-9d894ef1.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: pixel2
+  ROM_URL: https://mde1.androidfilehost.com/dl/yGYHpQqgBy9SKygalKZ-Yw/1619698128/17248734326145711299/OnePlusN10Oxygen_14.E.08_OTA_008_all_2012121435_9d3f21d4284.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OnePlusNordN105G
   TZ: Asia/Kolkata
 jobs:
   build:
