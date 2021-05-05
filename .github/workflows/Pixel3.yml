@@ -7,7 +7,7 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.omnirom.org/raphael/omni-11-20210502-raphael-WEEKLY.zip
+  ROM_URL: https://dl.omnirom.org/liber/omni-11-20210502-liber-WEEKLY.zip
   ROM_NAME: Generic
   ZIP_NAME: Omni11
   TZ: Asia/Kolkata
