@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://lavender.automation9914.workers.dev/OnePlusN100Oxygen_14.O.10_OTA_010_all_2104022020_c8ecef8e14db4d23.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OnePlusNordN100
+  ROM_URL: https://dl.omnirom.org/raphael/omni-11-20210502-raphael-WEEKLY.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Omni11
   TZ: Asia/Kolkata
 jobs:
   build:
