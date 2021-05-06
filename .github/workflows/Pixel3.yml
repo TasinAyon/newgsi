@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://api.aospextended.com/download/beryllium/r_gapps/51ec33e251453d4b1ba96969b5ef7727a46a6a6ea5c41c342a6e293239f6535a175afb8d4cdaae7cb0eb2b055a2b5246a24e8b2be98d
+  ROM_URL: https://mirrorbits.lineageos.org/full/sunfish/20210429/lineage-18.1-20210429-nightly-sunfish-signed.zip
   ROM_NAME: Generic
-  ZIP_NAME: AOSPXtended
+  ZIP_NAME: Los18.1
   TZ: Asia/Kolkata
 jobs:
   build:
