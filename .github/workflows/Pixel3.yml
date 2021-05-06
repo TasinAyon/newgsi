@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://github.com/ProtonAOSP/android_device_google_wahoo/releases/download/v11.4.0/proton-aosp_taimen-factory_11.4.0.zip
+  ROM_URL: https://github.com/ProtonAOSP/android_device_google_redbull/releases/download/v11.4.0/proton-aosp_redfin-factory_11.4.0.zip
   ROM_NAME: Generic
-  ZIP_NAME: Pixel2xl
+  ZIP_NAME: Pixel5
   TZ: Asia/Kolkata
 jobs:
   build:
