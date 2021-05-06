@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/coral-spp2.210219.018-factory-1ca4263d.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel4xlMay6
+  ROM_URL: https://github.com/ProtonAOSP/android_device_google_wahoo/releases/download/v11.4.0/proton-aosp_taimen-factory_11.4.0.zip
+  ROM_NAME: Generic
+  ZIP_NAME: Pixel2xl
   TZ: Asia/Kolkata
 jobs:
   build:
