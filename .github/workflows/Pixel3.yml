@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://api.aospextended.com/download/beryllium/r/51ec33e251453d4b1ba96969b5ef7727a46a6a6ea5c41c342a6e293239f6535a175afb8d4cdaae7cb0eb2b055a2b5247a24d8b2be98d
-  ROM_NAME: Generic
-  ZIP_NAME: Aex11
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/coral-spp2.210219.018-factory-1ca4263d.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel4xlMay6
   TZ: Asia/Kolkata
 jobs:
   build:
