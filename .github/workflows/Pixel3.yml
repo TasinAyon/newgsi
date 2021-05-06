@@ -7,7 +7,7 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.omnirom.org/zenfone6/omni-11-20210502-zenfone6-WEEKLY.zip
+  ROM_URL: https://dl.omnirom.org/nairo/omni-11-20210502-nairo-WEEKLY.zip
   ROM_NAME: Generic
   ZIP_NAME: Omni11
   TZ: Asia/Kolkata
