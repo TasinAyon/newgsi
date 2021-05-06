@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.omnirom.org/nairo/omni-11-20210502-nairo-WEEKLY.zip
+  ROM_URL: https://lavender.automation9914.workers.dev/pa-ruby-1-whyred-20210420-release.zip
   ROM_NAME: Generic
-  ZIP_NAME: Omni11
+  ZIP_NAME: AOSPARuby
   TZ: Asia/Kolkata
 jobs:
   build:
