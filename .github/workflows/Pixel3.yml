@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://lavender.automation9914.workers.dev/pa-ruby-1-whyred-20210420-release.zip
+  ROM_URL: https://api.aospextended.com/download/beryllium/r_gapps/51ec33e251453d4b1ba96969b5ef7727a46a6a6ea5c41c342a6e293239f6535a175afb8d4cdaae7cb0eb2b055a2b5246a24e8b2be98d
   ROM_NAME: Generic
-  ZIP_NAME: AOSPARuby
+  ZIP_NAME: AOSPXtended
   TZ: Asia/Kolkata
 jobs:
   build:
