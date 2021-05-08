@@ -33,12 +33,12 @@ jobs:
        - name: Work
          continue-on-error: true
          run: |
-              sudo -E apt install python unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
+              sudo -E apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
               sudo -E apt install liblzma-dev python3-pip brotli lz4
               pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb
               git clone --recurse-submodules https://github.com/AndroidDumps/Firmware_extractor.git
               cd Firmware_extractor
-              wget https://ci.android.com/builds/submitted/7347475/aosp_cf_arm64_phone-userdebug/latest/aosp_cf_arm64_phone-img-7347475.zip -o firmware.zip
+              wget https://storage.googleapis.com/android-build/builds/aosp-master-linux-aosp_cf_arm64_phone-userdebug/7347475/9ea83a22c8464201018353eefaaad2c1ff72bac7991c1db14200081558173554/aosp_cf_arm64_phone-img-7347475.zip?GoogleAccessId=gcs-sign@android-builds-project.google.com.iam.gserviceaccount.com&Expires=1620466671&Signature=VCTExmS5r/Lc8RXVvxVzfgIBR5H6fYkmJj9o3IoZmo1seNeev/mM4XP5q/7NGKOLN0cEdLZidEbpSLF0xKsIRXvKlupPz42GuvrvhALfVZCnL6qSVsaMhyMmdRDufc/5iCs2/hoPUrfYs%2BHXB10cSGTnHjFVdrSTSh8Rm2thKNnr6nTk2oZDDmE4uuBCVAre68h9M2H0h6Z7RcJffHAgiYJgspt3XZGtOElz/HiYCY871EN11C7%2BxuX0JoRpnUtsQEM1ixNIacfHRYKQ0qGliOiMy3czGRSa02BdMjyNAH%2BdDG0nZuP5lwAXQU7z3SHI2z%2BV7ajPsOwdKUendAH52A%3D%3D -o firmware.zip
               ./extractor.sh firmware.zip
               
        - name: Zip
