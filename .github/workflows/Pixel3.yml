@@ -38,8 +38,8 @@ jobs:
               pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb
               git clone --recurse-submodules https://github.com/AndroidDumps/Firmware_extractor.git
               cd Firmware_extractor
-              wget https://lavender.automation9914.workers.dev/supercf.7z -o firmware.7z
-              ./extractor.sh firmware.7z
+              wget https://lavender.automation9914.workers.dev/supercf.7z
+              ./extractor.sh supercf.7z
               
        - name: Zip
          continue-on-error: true
