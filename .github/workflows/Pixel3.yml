@@ -1,4 +1,4 @@
-name: Building GSI..
+name: Firmware extract..
 
 on:
    pull_request:
@@ -7,9 +7,6 @@ on:
        - master
     
 env:
-  ROM_URL: https://github.com/ProtonAOSP/android_device_google_redbull/releases/download/v11.4.0/proton-aosp_redfin-factory_11.4.0.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Pixel5
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -33,29 +30,23 @@ jobs:
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
-       - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
-       
-       - name: Setting up ErfanGSI requirements
+       - name: Work
          continue-on-error: true
          run: |
-              sudo chmod -R 777 ErfanGSIs
-              cd ErfanGSIs
-              sudo bash setup.sh
-       
-       - name: Download Stock Rom & Generate GSI
-         continue-on-error: true
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
-       
-       - name: Zip AB and upload 
+              apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
+              apt install liblzma-dev python-pip brotli lz4
+              pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb
+              git clone --recurse-submodules https://github.com/AndroidDumps/Firmware_extractor.git
+              cd Firmware_extractor
+              wget https://ci.android.com/builds/submitted/7347475/aosp_cf_arm64_phone-userdebug/latest/aosp_cf_arm64_phone-img-7347475.zip -o firmware.zip
+              ./extractor.sh firmware.zip
+              
+       - name: Zip
          continue-on-error: true
          run: |
-              mkdir final
-              sudo chmod -R 777 ErfanGSIs/output
-              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl --upload-file ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z https://transfer.sh/
-       - name: Print build info
-         run: |
-              cat ErfanGSIs/output/*-Aonly-*.txt
+              
+              sudo chmod -R 777 Firmware_extractor/out
+              zip -r Firmware_extractor/out/Raw.7z Firmware_extractor/out
+              curl --upload-file Firmware_extractor/out/Raw.7z https://transfer.sh/
          
             
