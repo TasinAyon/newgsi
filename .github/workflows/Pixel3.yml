@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://lavender.automation9914.workers.dev/proton.zip
+  ROM_URL: https://devices.project404.co/0:/ginkgo/project-404-4.3-20210428-044150-RIPPA-ginkgo.zip
   ROM_NAME: Generic
-  ZIP_NAME: pixel4
+  ZIP_NAME: redminote8
   TZ: Asia/Kolkata
 jobs:
   build:
