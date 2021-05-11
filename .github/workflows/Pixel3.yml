@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://devices.project404.co/0:/ginkgo/project-404-4.3-20210428-044150-RIPPA-ginkgo.zip
-  ROM_NAME: Generic
-  ZIP_NAME: redminote8
+  ROM_URL: https://mgb1.androidfilehost.com/dl/Oe5bkVShWNKDKkRzKPoGdQ/1620812144/2188818919693794120/xiaomi.eu_multi_HMNote7_21.4.22_v12-10.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: redminote7
   TZ: Asia/Kolkata
 jobs:
   build:
