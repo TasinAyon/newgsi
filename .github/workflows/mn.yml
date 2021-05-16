@@ -1,0 +1,52 @@
+name: Firmware extract..
+
+on:
+   pull_request:
+   push:
+     branches:
+       - master
+    
+env:
+  TZ: Asia/Kolkata
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+       
+       - name: Clean Up
+         run: |
+           docker rmi `docker images -q`
+           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
+           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
+           sudo -E apt-get update
+           sudo -E apt-get -y autoremove --purge
+           sudo -E apt-get clean 
+           
+       - name: Initializing environment
+         run: |
+            sudo -E apt-get -qq update
+            sudo -E apt-get -qq install git openjdk-8-jdk wget
+       
+       - name: Work
+         continue-on-error: true
+         run: |
+              sudo -E apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
+              sudo -E apt install liblzma-dev python3-pip brotli lz4
+              pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb
+              git clone --recurse-submodules https://github.com/AndroidDumps/Firmware_extractor.git
+              cd Firmware_extractor
+              wget https://lavender.automation9914.workers.dev/supercf.7z
+              ./extractor.sh supercf.7z
+              
+       - name: Zip
+         continue-on-error: true
+         run: |
+              
+              sudo chmod -R 777 Firmware_extractor/out
+              zip -r Firmware_extractor/out/Raw.7z Firmware_extractor/out
+              curl --upload-file Firmware_extractor/out/Raw.7z https://transfer.sh/
+         
+            
