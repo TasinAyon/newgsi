@@ -1,4 +1,4 @@
-name: Building GSI..
+name: Firmware extract..
 
 on:
    pull_request:
@@ -7,9 +7,6 @@ on:
        - master
     
 env:
-  ROM_URL: https://mgb1.androidfilehost.com/dl/Oe5bkVShWNKDKkRzKPoGdQ/1620812144/2188818919693794120/xiaomi.eu_multi_HMNote7_21.4.22_v12-10.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: redminote7
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -33,29 +30,23 @@ jobs:
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
-       - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
-       
-       - name: Setting up ErfanGSI requirements
+       - name: Work
          continue-on-error: true
          run: |
-              sudo chmod -R 777 ErfanGSIs
-              cd ErfanGSIs
-              sudo bash setup.sh
-       
-       - name: Download Stock Rom & Generate GSI
-         continue-on-error: true
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
-       
-       - name: Zip AB and upload 
+              sudo -E apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
+              sudo -E apt install liblzma-dev python3-pip brotli lz4
+              pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb
+              git clone --recurse-submodules https://github.com/AndroidDumps/Firmware_extractor.git
+              cd Firmware_extractor
+              wget https://lavender.automation9914.workers.dev/supercf.7z
+              ./extractor.sh supercf.7z
+              
+       - name: Zip
          continue-on-error: true
          run: |
-              mkdir final
-              sudo chmod -R 777 ErfanGSIs/output
-              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl --upload-file ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z https://transfer.sh/
-       - name: Print build info
-         run: |
-              cat ErfanGSIs/output/*-Aonly-*.txt
+              
+              sudo chmod -R 777 Firmware_extractor/out
+              zip -r Firmware_extractor/out/Raw.7z Firmware_extractor/out
+              curl --upload-file Firmware_extractor/out/Raw.7z https://transfer.sh/
          
             
