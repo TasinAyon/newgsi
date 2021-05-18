@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://realme1.hitesh920.workers.dev//gsi_gms_arm64-exp-SPB1.210331.013-7333779-0cf2eba2.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Generic
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spb1.210331.013-factory-f3f9db4a.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: pixel5
   TZ: Asia/Kolkata
 jobs:
   build:
