@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/gsi/gsi_gms_arm64-exp-SPB1.210331.013-7333779-0cf2eba2.zip
+  ROM_URL: https://dl.google.com/developers/android/sc/images/gsi/aosp_arm64-exp-SPB1.210331.013-7333779-3227774b.zip
   ROM_NAME: Generic
-  ZIP_NAME: GenericGMS
+  ZIP_NAME: aosp12
   TZ: Asia/Kolkata
 jobs:
   build:
