@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/gsi/aosp_arm64-exp-SPB1.210331.013-7333779-3227774b.zip
-  ROM_NAME: Generic
-  ZIP_NAME: aosp12
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/sargo-rpb1.200504.018-factory-ff6200ce.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Sargorpb1
   TZ: Asia/Kolkata
 jobs:
   build:
