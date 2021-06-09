@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/sargo-rpb1.200504.018-factory-ff6200ce.zip
+  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spb2.210513.007-factory-2b21382e.zip
   ROM_NAME: Pixel
-  ZIP_NAME: Sargorpb1
+  ZIP_NAME: Pixel5beta2
   TZ: Asia/Kolkata
 jobs:
   build:
