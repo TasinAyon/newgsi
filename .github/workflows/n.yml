@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/sc/images/factory/redfin-spb2.210513.007-factory-2b21382e.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel5beta2
+  ROM_URL: https://gdrivemirrorcloud.ga/0:/Raw.7z
+  ROM_NAME: Generic
+  ZIP_NAME: AsusZenfone8A12
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -53,7 +53,16 @@ jobs:
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl --upload-file ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z https://transfer.sh/
+
+       - name: Upload SGSI to action-gh-release...
+         uses: ncipollo/release-action@v1.8.6
+         with:
+           artifacts: /home/runner/work/newgsi/ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z
+           name: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-unpack
+           tag: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-${{ github.run_number }}
+           body: Use actions auto bulid by Xiaoxindada
+           token: ${{ secrets.GITHUB_TOKEN }}
+
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
