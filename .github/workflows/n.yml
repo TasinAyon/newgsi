@@ -57,7 +57,7 @@ jobs:
        - name: Upload SGSI to action-gh-release...
          uses: ncipollo/release-action@v1.8.6
          with:
-           artifacts: /home/runner/work/newgsi/ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z
+           artifacts: /home/runner/work/newgsi/ErfanGSIs/output/AsusZenfone8A12-GSI-AB.7z
            name: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-unpack
            tag: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-${{ github.run_number }}
            body: Use actions auto bulid by Xiaoxindada
