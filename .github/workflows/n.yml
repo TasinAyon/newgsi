@@ -7,10 +7,11 @@ on:
        - master
     
 env:
-  ROM_URL: https://assorted.downloads.oppo.com/firmware/CPH2173/CPH2173_11_C_OTA_1020_all_367bfa_00011010.zip
-  ROM_NAME: Generic
-  ZIP_NAME: OppoFindX3Pro
+  ROM_URL: https://lavender.automation9914.workers.dev/OnePlusN100Oxygen_14.O.11_OTA_011_all_2105112059_27364ba113e342ee.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: opnordn100a11
   TZ: Asia/Kolkata
+  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -53,16 +54,8 @@ jobs:
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-
-       - name: Upload SGSI to action-gh-release...
-         uses: ncipollo/release-action@v1.8.6
-         with:
-           artifacts: ./ErfanGSIs/output/OppoFindX3Pro-GSI-AB.7z
-           name: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-unpack
-           tag: xiaoxinSGSI-${{ env.OS_TYPE }}-${{ env.BUILD_TYPE }}-Android${{ env.VERSION }}-${{ github.run_number }}
-           body: Use actions auto bulid by Xiaoxindada
-           token: ${{ secrets.GITHUB_TOKEN }}
-
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer $MIR ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z    
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
