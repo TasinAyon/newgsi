@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://lavender.automation9914.workers.dev/OnePlusN100Oxygen_14.O.11_OTA_011_all_2105112059_27364ba113e342ee.zip
+  ROM_URL: https://mgb1.androidfilehost.com/dl/qqD77KSca75zmjBMYv3j9A/1626026540/2188818919693773213/NordOxygen_14.O.13_OTA_013_all_2102040620_82e7f8c76.zip
   ROM_NAME: OxygenOS
-  ZIP_NAME: opnordn100a11
+  ZIP_NAME: opnorda10
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
