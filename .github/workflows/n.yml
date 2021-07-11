@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://mgb1.androidfilehost.com/dl/qqD77KSca75zmjBMYv3j9A/1626026540/2188818919693773213/NordOxygen_14.O.13_OTA_013_all_2102040620_82e7f8c76.zip
+  ROM_URL: https://mor1.androidfilehost.com/dl/NfjGKbElIExF1vMtSejrsQ/1626070377/14943124697586337029/OnePlus6Oxygen_22.J.54_OTA_054_all_2105112236_1ff2589108822e6.zip
   ROM_NAME: OxygenOS
-  ZIP_NAME: opnorda10
+  ZIP_NAME: op6
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
