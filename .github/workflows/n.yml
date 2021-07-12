@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://mor1.androidfilehost.com/dl/NfjGKbElIExF1vMtSejrsQ/1626070377/14943124697586337029/OnePlus6Oxygen_22.J.54_OTA_054_all_2105112236_1ff2589108822e6.zip
+  ROM_URL: https://gdrivemirrorcloud.ga/0:/LavenderOOS(OnePlus7Oxygen_13.W.45_OTA_045_all_2010191035_0b7a).zip
   ROM_NAME: OxygenOS
-  ZIP_NAME: op6
+  ZIP_NAME: op7
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
