@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://ava6.androidfilehost.com/dl/v3Hh9PhIXewn6zt6v7mgJw/1627365383/14943124697586362822/xiaomi.eu_multi_HMNote7_V12.5.3.0.QFGCNXM_v12-10.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: redminote7
+  ROM_URL: https://mva1.androidfilehost.com/dl/8L15_0Fl8nIS56J7V2umdA/1628240826/2188818919693775613/Nokia_9_PureView_AOP-525A-0-00WW-B03_600WW_10_20200501_%28by_firmwarefile.com%29.zip
+  ROM_NAME: Generic
+  ZIP_NAME: nokia9pureview
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
