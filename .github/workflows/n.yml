@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://www.priiiiyocloud.workers.dev/0://IME-2.51.617.1_Stock-system-vendor-boot-vbmeta.zip
-  ROM_NAME: Generic
-  ZIP_NAME: Htc
+  ROM_URL: https://ava3.androidfilehost.com/dl/SV1Sjw3hBAvT8jNaDW1Mrw/1629809117/4349826312261609322/OnePlus6Oxygen_22_OTA_034_all_1909112343_31f86cec5f8d4c7b.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: oneplus6
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -35,7 +35,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/TasinAyon/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
        
        - name: Setting up ErfanGSI requirements
          continue-on-error: true
