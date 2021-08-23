@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/bonito-pq3b.190801.002-factory-61a2836d.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/blueline-pq3a.190801.002-factory-f3d66c49.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel3axl
+  ZIP_NAME: pixel3
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
