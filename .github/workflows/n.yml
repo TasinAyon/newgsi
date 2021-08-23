@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://gdrivemirrorcloud.ga/0:/OnePlus6Oxygen_22_OTA_034_all_1909112343_31f86cec5f8d4c7b.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: oneplus6
+  ROM_URL: https://dl.google.com/dl/android/aosp/bonito-pq3b.190801.002-factory-61a2836d.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: pixel3axl
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -35,7 +35,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/TasinAyon/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
        
        - name: Setting up ErfanGSI requirements
          continue-on-error: true
