@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://mva1.androidfilehost.com/dl/8L15_0Fl8nIS56J7V2umdA/1628240826/2188818919693775613/Nokia_9_PureView_AOP-525A-0-00WW-B03_600WW_10_20200501_%28by_firmwarefile.com%29.zip
+  ROM_URL: https://ava2.androidfilehost.com/dl/KycvInuX5peST_iZuvUL4A/1629790334/4349826312261717833/IME-2.51.617.1_Stock-system-vendor-boot-vbmeta.zip
   ROM_NAME: Generic
-  ZIP_NAME: nokia9pureview
+  ZIP_NAME: Htc
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
