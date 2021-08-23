@@ -7,7 +7,7 @@ on:
        - master
     
 env:
-  ROM_URL: https://ava2.androidfilehost.com/dl/KycvInuX5peST_iZuvUL4A/1629790334/4349826312261717833/IME-2.51.617.1_Stock-system-vendor-boot-vbmeta.zip
+  ROM_URL: https://www.priiiiyocloud.workers.dev/0://IME-2.51.617.1_Stock-system-vendor-boot-vbmeta.zip
   ROM_NAME: Generic
   ZIP_NAME: Htc
   TZ: Asia/Kolkata
