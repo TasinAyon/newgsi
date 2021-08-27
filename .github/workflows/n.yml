@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/blueline-pq3a.190801.002-factory-f3d66c49.zip
+  ROM_URL: https://lavender.automation9914.workers.dev/pixel5systemb4.1.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel3
+  ZIP_NAME: Pixel5
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -35,7 +35,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
+         run: git clone --recurse-submodules https://github.com/TasinAyon/ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          continue-on-error: true
