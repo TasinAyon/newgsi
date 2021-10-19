@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/barbet-sp1a.210812.015-factory-13f4d9f2.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-sp1a.210812.015-factory-798ab4d2.zip
   ROM_NAME: Pixel
-  ZIP_NAME: pixel5a
+  ZIP_NAME: pixel5
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -45,7 +45,7 @@ jobs:
        
        - name: Download Stock Rom & Generate GSI
          continue-on-error: true
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh -b -c $ROM_URL $ROM_NAME
        
        - name: Zip AB and upload 
          continue-on-error: true
