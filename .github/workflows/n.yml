@@ -7,11 +7,10 @@ on:
        - master
     
 env:
-  ROM_URL: https://lavender.automation9914.workers.dev/pixel5systemb4.1.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/barbet-sp1a.210812.015-factory-13f4d9f2.zip
   ROM_NAME: Pixel
-  ZIP_NAME: Pixel5
+  ZIP_NAME: pixel5a
   TZ: Asia/Kolkata
-  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -54,8 +53,7 @@ jobs:
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer $MIR ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z    
+              curl --upload-file ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z https://transfer.sh/
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
