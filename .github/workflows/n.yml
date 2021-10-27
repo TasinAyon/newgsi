@@ -7,9 +7,9 @@ on:
        - master
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-sp1a.210812.015-factory-798ab4d2.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: pixel5
+  ROM_URL: http://drive.genos-drive.workers.dev/CAFExtended-v3.0-GAPPS-beryllium-20211022-2118-UNOFFICIAL.zip
+  ROM_NAME: Generic
+  ZIP_NAME: CafExtended
   TZ: Asia/Kolkata
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
        - name: Initializing environment
          run: |
             sudo -E apt-get -qq update
-            sudo -E apt-get -qq install git e2fsprogs openjdk-8-jdk wget
+            sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs
