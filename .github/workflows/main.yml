@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.5.8.0.RGGMIXM/miui_BEGONIAGlobal_V12.5.8.0.RGGMIXM_db66dbc998_11.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: miui
+  ROM_URL: https://mirrorbits.lineageos.org/full/merlinx/20230804/lineage-20.0-20230804-nightly-merlinx-signed.zip
+  ROM_NAME: Generic
+  ZIP_NAME: los
   TZ: Asia/Kolkata
   MIR: gof
 jobs:
@@ -43,7 +43,7 @@ jobs:
 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/TasinAyon/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/AyOn9914/ErfanGSIs_patched13
        
        - name: Setting up ErfanGSI requirements
          run: |
