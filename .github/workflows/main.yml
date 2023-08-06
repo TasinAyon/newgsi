@@ -43,7 +43,7 @@ jobs:
 
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/AyOn9914/ErfanGSIs_patched13
+         run: git clone --recurse-submodules https://github.com/AyOn9914/ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
